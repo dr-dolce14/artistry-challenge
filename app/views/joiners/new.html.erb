@@ -1,0 +1,11 @@
+<h3>Link an Artist to an Instrument</h3>
+
+<%= form_for @joiner do |f| %>
+<%= f.label :instrument_id %>
+<%= f.collection_select :instrument_id, @instruments, :id, :name %>
+
+<%= f.label :artist_id %>
+<%= f.collection_select :artist_id, @artists, :id, :name %>
+
+<%= f.submit %>
+<% end %>

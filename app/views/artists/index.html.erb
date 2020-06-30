@@ -1,0 +1,9 @@
+<h1>Artists Index Page</h1>
+
+<% @artists.each do |artist| %>
+<p><%= link_to artist.name, artist_path(artist) %>
+<% end %>
+
+<p><%= link_to "Create a New Artist", new_artist_path %></p>
+
+<p><%= link_to "Connect an Artist to an Instrument", new_joiner_path %></p>
